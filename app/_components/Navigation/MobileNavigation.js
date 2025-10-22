@@ -8,6 +8,10 @@ import Link from 'next/link';
 export default function MobileNavigation() {
     const [isOpen, setIsOpen] = useState(false);
 
+    const handleLinkClick = () => {
+        setIsOpen(false);
+    }
+
     return (
         <>
             <div className="mobile-navigation">
@@ -22,22 +26,22 @@ export default function MobileNavigation() {
             <div className={`mobile-menu ${isOpen ? 'open' : ''}`}>
                 <ul>
                     <li>
-                        <Link href="/">
+                        <Link href="/" onClick={handleLinkClick}>
                             Home
                         </Link>
                     </li>
                     <li>
-                        <Link href="/about">
+                        <Link href="/about" onClick={handleLinkClick}>
                             About
                         </Link>
                     </li>
                     <li>
-                        <Link href="/services">
+                        <Link href="/services" onClick={handleLinkClick}>
                             Services
                         </Link>
                     </li>
                     <li>
-                        <Link href="/contact">
+                        <Link href="/contact" onClick={handleLinkClick}>
                             Contact Us
                         </Link>
                     </li>

@@ -1,0 +1,83 @@
+@use "../variables.scss";
+
+.about-page {
+	padding: 4rem 2rem;
+	max-width: 1000px;
+	margin: 0 auto;
+	font-family: Arial, sans-serif;
+	color: #333;
+
+	h1 {
+		font-size: 2.5rem;
+		color: variables.$alt-bg-color;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	.intro {
+		font-size: 1.2rem;
+		text-align: center;
+		margin-bottom: 3rem;
+		line-height: 1.6;
+	}
+
+	.about-content {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2.5rem;
+
+		@include variables.responsive(variables.$medium) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@include variables.responsive(variables.$large) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.section {
+			background: variables.$white;
+			border: 1px solid #ddd;
+			border-radius: 12px;
+			padding: 2rem;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			transition: transform 0.3s, box-shadow 0.3s;
+
+			&:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+			}
+
+			h2 {
+				font-size: 1.5rem;
+				color: variables.$alt-bg-color;
+				margin-bottom: 1rem;
+			}
+
+			p {
+				font-size: 1rem;
+				line-height: 1.5;
+				color: variables.$gray;
+			}
+
+			ul {
+				list-style-type: disc;
+				padding-left: 1.5rem;
+				li {
+					margin-bottom: 0.5rem;
+					font-size: 1rem;
+					color: variables.$gray;
+				}
+			}
+		}
+	}
+}
+
+@include variables.responsive(variables.$large) {
+	.about-page {
+		padding: 4rem 0rem;
+		max-width: 1000px;
+		margin: 0 auto;
+		font-family: Arial, sans-serif;
+		color: #333;
+	}
+}

@@ -26,9 +26,21 @@ export default function MobileNavigation() {
                             Home
                         </Link>
                     </li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Contact</li>
+                    <li>
+                        <Link href="/about">
+                            About
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/services">
+                            Services
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/contact">
+                            Contact Us
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </>

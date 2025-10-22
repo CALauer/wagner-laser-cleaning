@@ -15,7 +15,7 @@ export default function MobileNavigation() {
     return (
         <>
             <div className="mobile-navigation">
-                <Image src="/sm_logo.png" width={100} height={100} alt="Logo" />
+                <Image src="/sm_logo1.png" width={100} height={100} alt="Logo" />
                 {isOpen ? (
                     <MdClose onClick={() => setIsOpen(false)} />
                 ) : (

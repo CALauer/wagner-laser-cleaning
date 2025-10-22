@@ -6,7 +6,7 @@ export default function DesktopNavigation() {
         <div className='desktop-navigation'>
             <div className='desktop-content-wrapper'>
                 <div className='desktop-logo-wrapper'>
-                    <Image src="/sm_logo.png" width={100} height={100} alt="Logo" />
+                    <Image src="/sm_logo1.png" width={100} height={100} alt="Logo" />
                     <div className='logo-text-wrapper'>
                         <span>Wagner</span>
                         <span>Laser Cleaning</span>

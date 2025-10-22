@@ -1,0 +1,22 @@
+@use "./variables.scss";
+@use "./navigation.scss";
+@use "./pages/home.scss";
+@use "./pages/contact.scss";
+
+:root {
+	--primary-bg-color: #ebe9e9;
+	--primary-color: #feff16;
+	--alt-bg-color: #0d1821;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+		sans-serif;
+}
+
+body {
+	background: var(--primary-bg-color);
+}

@@ -1,0 +1,172 @@
+@use "../variables.scss" as v;
+
+.home-page {
+	background: v.$white;
+	color: v.$gray;
+	font-family: sans-serif;
+}
+
+.home-main {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 4rem 0.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 6rem;
+}
+
+/* Hero Section */
+.hero-section {
+	text-align: center;
+
+	h1 {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: v.$black;
+	}
+
+	p {
+		color: v.$gray;
+		font-size: 1.125rem;
+		max-width: 700px;
+		margin: 1rem auto 0;
+		line-height: 1.6;
+	}
+
+	.cta-button {
+		background: v.$primary-color;
+		color: v.$black;
+		padding: 0.75rem 2rem;
+		border-radius: 0.5rem;
+		font-weight: 600;
+		margin-top: 2rem;
+		display: inline-block;
+		text-decoration: none;
+
+		&:hover {
+			background: darken(v.$primary-color, 10%);
+		}
+	}
+}
+
+/* Info Section */
+.info-section {
+	h2 {
+		font-size: 2rem;
+		font-weight: 600;
+		color: v.$black;
+		margin-bottom: 1rem;
+	}
+
+	p {
+		line-height: 1.7;
+		margin-bottom: 1rem;
+	}
+}
+
+/* Benefits Section */
+.benefits-section {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+
+	@include v.responsive(v.$medium) {
+		grid-template-columns: 1fr 1fr;
+		align-items: start;
+	}
+
+	.benefits-text {
+		ul {
+			list-style: disc;
+			padding-left: 1.25rem;
+
+			li {
+				margin-bottom: 0.75rem;
+			}
+		}
+	}
+
+	.benefits-image img {
+		width: 100%;
+		border-radius: 1rem;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+	}
+}
+
+/* Applications Section */
+.applications-section {
+	h2 {
+		font-size: 2rem;
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+
+	ul {
+		list-style: disc;
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 0.75rem;
+		padding-left: 1.25rem;
+
+		@include v.responsive(v.$medium) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+/* Local Section */
+.local-section {
+	h2 {
+		font-size: 2rem;
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+
+	p {
+		margin-bottom: 1rem;
+	}
+}
+
+/* Contact Section */
+.contact-section {
+	text-align: center;
+	background: v.$primary-bg-color;
+	padding: 3rem 1.5rem;
+	border-radius: 1rem;
+
+	h2 {
+		font-size: 2rem;
+		font-weight: 700;
+		color: v.$black;
+	}
+
+	p {
+		margin: 1rem auto 2rem;
+		max-width: 700px;
+	}
+
+	.contact-button {
+		background: v.$primary-color;
+		color: v.$black;
+		padding: 0.75rem 2rem;
+		border-radius: 0.5rem;
+		font-weight: 600;
+		text-decoration: none;
+		transition: background 0.2s ease;
+
+		&:hover {
+			background: darken(v.$primary-color, 10%);
+		}
+	}
+}
+
+@include v.responsive(v.$large) {
+	.home-main {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 4rem 0rem;
+		display: flex;
+		flex-direction: column;
+		gap: 6rem;
+	}
+}

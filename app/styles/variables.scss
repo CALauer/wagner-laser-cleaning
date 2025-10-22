@@ -1,0 +1,27 @@
+$black: #000000;
+$white: #ffffff;
+$gray: #706c61;
+$red: #ff0000;
+$green: green;
+$primary-color: #feff16;
+$primary-bg-color: #ebe9e9;
+$alt-bg-color: #0d1821;
+$orange: #f18f01;
+
+$small: 576px;
+$medium: 768px;
+$large: 1200px;
+$xlarge: 1600px;
+
+// Create a mixin for responsive breakpoints
+@mixin responsive($size) {
+	@media (min-width: $size) {
+		@content;
+	}
+}
+
+:root {
+	--primary-bg-color: $primary-bg-color;
+	--primary-color: $primary-bg-color;
+	--alt-bg-color: $alt-bg-color;
+}
